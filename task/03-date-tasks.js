@@ -123,8 +123,8 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 function angleBetweenClockHands(date) {
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
+    var hours = date.getUTCHours();
+    var minutes = date.getUTCMinutes();
 
     var angle = 0.5 * ((60 * hours) - (11 * minutes));
 
