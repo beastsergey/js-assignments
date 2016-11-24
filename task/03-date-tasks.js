@@ -102,7 +102,7 @@ function timeSpanToString(startDate, endDate) {
             ? '0' + diffDate.getSeconds()
             : diffDate.getSeconds();
     var milliseconds = new String(diffDate.getMilliseconds()).length < 3
-            ? new String(diffDate.getMilliseconds()).length < 2 ? '0' + diffDate.getMilliseconds() : '00' + diffDate.getMilliseconds()
+            ? new String(diffDate.getMilliseconds()).length < 2 ? '00' + diffDate.getMilliseconds() : '0' + diffDate.getMilliseconds()
             : diffDate.getMilliseconds()
 
     return hours + ':' + minutes + ':' + seconds + '.' + milliseconds;
