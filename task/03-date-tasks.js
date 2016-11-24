@@ -127,8 +127,9 @@ function angleBetweenClockHands(date) {
     var minutes = date.getUTCMinutes();
 
     var angle = 0.5 * ((60 * hours) - (11 * minutes));
+    var correctedAngle = angle > 180 ? 360 - angle : angle;
 
-    return angle > 180 ? 360 - angle : angle;
+    return correctedAngle * (Math.PI / 180);
 }
 
 
