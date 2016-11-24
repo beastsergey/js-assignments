@@ -93,7 +93,7 @@ function timeSpanToString(startDate, endDate) {
     var timeDiff = Math.abs(endDate.getTime() - startDate.getTime());
     var diffDate = new Date(timeDiff);
 
-    return diffDate.getHours() + ":" + diffDate.getMinutes() + ":" + diffDate.getSeconds() + "." diffDate.getMilliseconds();
+    return diffDate.getHours() + ":" + diffDate.getMinutes() + ":" + diffDate.getSeconds() + "." + diffDate.getMilliseconds();
 }
 
 
