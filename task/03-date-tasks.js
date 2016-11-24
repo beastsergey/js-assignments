@@ -92,8 +92,20 @@ function isLeapYear(date) {
 function timeSpanToString(startDate, endDate) {
     var timeDiff = Math.abs(endDate.getTime() - startDate.getTime());
     var diffDate = new Date(timeDiff);
+    var hours = diffDate.getHours().length < 2
+            ? '0' + diffDate.getHours()
+            : diffDate.getHours();
+    var minutes = diffDate.getMinutes().length < 2
+            ? '0' + diffDate.getMinutes()
+            : diffDate.getMinutes();
+    var seconds = diffDate.getSeconds().length < 2
+            ? '0' + diffDate.getSeconds()
+            : diffDate.getSeconds();
+    var milliseconds = diffDate.getMilliseconds() < 3
+            ? diffDate.getMilliseconds() < 2 ? '0' + diffDate.getMilliseconds() : '00' + diffDate.getMilliseconds()
+            : diffDate.getMilliseconds()
 
-    return diffDate.getHours() + ":" + diffDate.getMinutes() + ":" + diffDate.getSeconds() + "." + diffDate.getMilliseconds();
+    return hours + ':' + minutes + ':' + seconds + '.' + milliseconds;
 }
 
 
